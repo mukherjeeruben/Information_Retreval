@@ -1,7 +1,7 @@
 Set base path for this directory in terminal/cmd
 
 
-For Windows : 
+Pre-Compiled for Windows :
 
 Execute commands -> 
 
