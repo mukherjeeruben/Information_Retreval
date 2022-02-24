@@ -14,7 +14,7 @@ Terminal Options :
 
 Press <b>1</b> for Vector Space Model.  
 Press <b>2</b> for BM25.  
-Press <b>3</b> for Unigram Language Model.
+Press <b>3</b> for Unigram Language Model.  
 Press <b>any other key </b> to exit.
 
 
