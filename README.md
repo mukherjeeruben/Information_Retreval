@@ -9,13 +9,15 @@ Steps to execute the project
    Execute command -> pip install -r requirements.txt
 3. Execute command -> python main.py
 
-For each model execution you need to Execute command -> python main.py
+**_NOTE :_** 
+1. For <u>each model execution </u> you need to execute command -> python main.py
+2. The terminal terminates after **_each_** model execution.
 
 
 Terminal Options :
 
-Press 1 for Vector Space Model \n
-Press 2 for BM25 \n
-Press 3 or any key for Unigram Language Model
+Press <b>1</b> for Vector Space Model  
+Press <b>2</b> for BM25  
+Press <b>3</b> or <b>any key</b> for Unigram Language Model  
 
  
