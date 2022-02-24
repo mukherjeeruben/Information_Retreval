@@ -14,8 +14,8 @@ For each model execution you need to Execute command -> python main.py
 
 Terminal Options :
 
-Press 1 for Vector Space Model
-Press 2 for BM25
+Press 1 for Vector Space Model \n
+Press 2 for BM25 \n
 Press 3 or any key for Unigram Language Model
 
  
