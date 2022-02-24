@@ -24,7 +24,7 @@ def generate_language_model_vectors(doc_word_map, query_word_map):
 
 
 def generate_languagemodel_output(bm25vectors):
-    with open('languagemodel_output.out', 'w') as f:
+    with open('model_outputs/languagemodel_output.out', 'w') as f:
         with redirect_stdout(f):
             for terms in bm25vectors:
                 for k, v in terms.items():

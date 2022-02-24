@@ -23,7 +23,7 @@ def get_similarity_matrix(document_tf_idf, query_tf_idf):
 
 
 def generate_vector_space_output(document_tf_idf, query_tf_idf):
-    with open('vector_space_output.out', 'w') as f:
+    with open('model_outputs/vector_space_output.out', 'w') as f:
         with redirect_stdout(f):
             for query_id, vector_value in query_tf_idf.items():
                 similarity_matrix = get_similarity_matrix(document_tf_idf, query_tf_idf[query_id])

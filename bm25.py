@@ -28,7 +28,7 @@ def generate_bm25_vectors(doc_word_map, query_word_map, average):
 
 
 def generate_bm25_output(bm25vectors):
-    with open('bm25_output.out', 'w') as f:
+    with open('model_outputs/bm25_output.out', 'w') as f:
         with redirect_stdout(f):
             for terms in bm25vectors:
                 for query_id, v in terms.items():
