@@ -9,6 +9,7 @@ from preprocess import preprocess
 
 def vector_space_model():
     print('Vector Space Model')
+    time_stamp(stage='start')
     print('Calculating TF-IDF for Documents')
     document_tf_idf = generate_tf_idf(directory_path=config.document_directory, element_type='document')
     print('Calculating TF-IDF for Queries')

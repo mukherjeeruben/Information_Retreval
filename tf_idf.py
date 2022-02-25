@@ -1,13 +1,13 @@
 from extract_load_save import get_file_list
 import xml.etree.ElementTree as et
 import re as regular_expression
-from nltk import word_tokenize, corpus, stem
+from nltk import word_tokenize, corpus, WordNetLemmatizer
 from math import log
 
 
 def generate_tf_idf(directory_path, element_type):
     file_list = get_file_list(directory_path)
-    stemmer = stem.PorterStemmer()
+    lemmatizer = WordNetLemmatizer()
     term_count = dict()
     term_frequency = dict()
     inverse_document_frequency = dict()
@@ -21,7 +21,7 @@ def generate_tf_idf(directory_path, element_type):
                              word not in corpus.stopwords.words('english')])
         else:
             data = " ".join([word for word in set(str(root[1].text).lower().split()) if word not in corpus.stopwords.words('english')])
-        data = stemmer.stem(regular_expression.sub('[^a-zA-Z0-9]+', ' ', data))
+        data = lemmatizer.lemmatize(regular_expression.sub('[^a-zA-Z0-9]+', ' ', data))
         toknized_words = [word for word in word_tokenize(data) if len(word) > 2]
         word_count = 0
         tf_idf[primary_key] = dict()

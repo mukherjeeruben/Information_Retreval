@@ -13,7 +13,7 @@ def get_similarity_matrix(document_tf_idf, query_tf_idf):
         for term, val in query_tf_idf.items():
             if term in document_tf_idf[document]:
                 numerator += document_tf_idf[document][term] * query_tf_idf[term]
-                denominator_b += query_tf_idf[term] * query_tf_idf[term]
+            denominator_b += query_tf_idf[term] * query_tf_idf[term]
         if denominator_a != 0 and denominator_b != 0:
             similarity_matrix.update({document: numerator / (sqrt(denominator_a) * sqrt(denominator_b))})
             numerator = 0
@@ -29,7 +29,7 @@ def generate_vector_space_output(document_tf_idf, query_tf_idf):
                 similarity_matrix = get_similarity_matrix(document_tf_idf, query_tf_idf[query_id])
                 with redirect_stdout(f):
                     for element in range(len(similarity_matrix)):
-                        if element + 1 > 30:
+                        if element + 1 > 1000:
                             break
                         else:
                             document_id = max(similarity_matrix, key=lambda x: similarity_matrix[x])
