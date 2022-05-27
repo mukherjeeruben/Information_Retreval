@@ -1,4 +1,4 @@
-# MCM 2021 - 22 CA6005 Information Retreval Assignment
+#Information Retreval
 
 Clone Repository 
 
